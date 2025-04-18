@@ -108,6 +108,7 @@
     gitui
     fzf
     lshw
+    gh
 
     fish
     vscode-fhs
