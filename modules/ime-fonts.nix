@@ -8,14 +8,18 @@
 {
   # Font configuration
   fonts.packages = with pkgs; [
-    noto-fonts
-    ibm-plex
-    sarasa-gothic
+    noto-fonts-cjk-serif # serif
+    ibm-plex # sans serif
+    sarasa-gothic # monospace
+    unifont
   ];
   fonts.fontconfig.defaultFonts = {
     monospace = [ "Sarasa Fixed SC" ];
-    sansSerif = [ "Sarasa UI SC" ];
-    serif = [ "Noto Serif" ];
+    sansSerif = [
+      "IBM Plex Sans"
+      "IBM Plex Sans SC"
+    ];
+    serif = [ "IBM Plex Serif" ];
   };
 
   # Input method
