@@ -34,6 +34,18 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
+  # Set Nvidia drivers for this machine
+  hardware.nvidia.open = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.prime = {
+    offload = {
+      enable = true;
+      enableOffloadCmd = true;
+    };
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
+
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
@@ -95,6 +107,7 @@
     git
     gitui
     fzf
+    lshw
 
     fish
     vscode-fhs
@@ -111,6 +124,11 @@
     openrct2
     openloco
 
+    qq
+    wechat-uos
+
+    megacmd
+
     (pkgs.runCommand "openttd-jgrpp" { nativeBuildInputs = [ pkgs.makeWrapper ]; } ''
       mkdir -p $out/bin
       makeWrapper ${pkgs.openttd-jgrpp}/bin/openttd $out/bin/openttd-jgrpp --argv0 openttd
@@ -122,6 +140,37 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
+
+  fonts.packages = with pkgs; [
+    ibm-plex
+    sarasa-gothic
+  ];
+  fonts.fontconfig.defaultFonts = {
+    monospace = [ "Sarasa Fixed SC" ];
+    sansSerif = [ "Sarasa UI SC" ];
+    serif = [ "Noto Serif" ];
+  };
+
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-gtk
+      kdePackages.fcitx5-configtool
+      fcitx5-lua
+      libsForQt5.fcitx5-qt
+      fcitx5-rime
+    ];
+    fcitx5.waylandFrontend = true;
+  };
+
+  environment.sessionVariables = rec {
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
+    SDL_IM_MODULE = "fcitx";
+    GLFW_IM_MODULE = "ibus";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
