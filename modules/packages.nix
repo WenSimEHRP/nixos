@@ -37,6 +37,7 @@
 
     qq
     wechat-uos
+    aseprite
 
     megacmd
 
