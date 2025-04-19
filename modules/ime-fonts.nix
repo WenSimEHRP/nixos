@@ -28,10 +28,11 @@
     type = "fcitx5";
     fcitx5.addons = with pkgs; [
       fcitx5-gtk
-      kdePackages.fcitx5-configtool
       fcitx5-lua
-      libsForQt5.fcitx5-qt
       fcitx5-rime
+      kdePackages.fcitx5-configtool
+      libsForQt5.fcitx5-qt
+      qt6Packages.fcitx5-qt
     ];
     fcitx5.waylandFrontend = true;
   };
