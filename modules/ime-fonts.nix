@@ -14,12 +14,18 @@
     unifont
   ];
   fonts.fontconfig.defaultFonts = {
-    monospace = [ "Sarasa Fixed SC" ];
-    sansSerif = [
-      "IBM Plex Sans"
-      "IBM Plex Sans SC"
+    monospace = [
+      "Sarasa Fixed SC"
+      "Noto Color Emoji"
     ];
-    serif = [ "IBM Plex Serif" ];
+    sansSerif = [
+      "IBM Plex Sans SC"
+      "Noto Color Emoji"
+    ];
+    serif = [
+      "Noto Serif CJK SC"
+      "Noto Color Emoji"
+    ];
   };
 
   # Input method
