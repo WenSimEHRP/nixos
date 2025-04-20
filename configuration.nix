@@ -8,6 +8,7 @@
   imports = [
     # Include the results of the hardware scan
     ./hardware-configuration.nix
+    <nixos-hardware/lenovo/legion/16irx8h>
 
     # Import modular configurations
     ./modules/system.nix
