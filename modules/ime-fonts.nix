@@ -19,10 +19,12 @@
       "Noto Color Emoji"
     ];
     sansSerif = [
+      "IBM Plex Sans"
       "IBM Plex Sans SC"
       "Noto Color Emoji"
     ];
     serif = [
+      "Noto Serif"
       "Noto Serif CJK SC"
       "Noto Color Emoji"
     ];
