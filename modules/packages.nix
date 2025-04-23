@@ -34,7 +34,7 @@
     openttd
     openttd-jgrpp
     openrct2
-    # openloco
+    openloco
 
     qq
     wechat-uos
