@@ -18,8 +18,9 @@
     git
     gitui
     fzf
-    lshw
     gh
+    gnumake
+    typst
 
     fish
     vscode-fhs
@@ -35,6 +36,8 @@
     openttd-jgrpp
     openrct2
     openloco
+    lutris
+    wineWowPackages.stable
 
     qq
     wechat-uos
