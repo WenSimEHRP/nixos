@@ -15,4 +15,17 @@
   networking.networkmanager.enable = true;
   time.timeZone = "America/Vancouver";
   i18n.defaultLocale = "en_CA.UTF-8";
+
+  # printers
+  services.printing.enable = true;
+  services.printing.drivers = [
+    pkgs.gutenprint
+    pkgs.hplipWithPlugin
+    pkgs.splix
+  ];
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 }

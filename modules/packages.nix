@@ -5,6 +5,18 @@
   ...
 }:
 
+let
+  openttd-jgrpp = pkgs.openttd-jgrpp.overrideAttrs (oldAttrs: {
+    cmakeFlags = (oldAttrs.cmakeFlags or [ ]) ++ [
+      "-DBINARY_NAME=openttd-jgrpp"
+    ];
+    meta = oldAttrs.meta // {
+      mainProgram = "openttd-jgrpp";
+    };
+    # don't install the basesets after install
+    postInstall = "";
+  });
+in
 {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -21,11 +33,17 @@
     gh
     gnumake
     typst
+    tinymist
+    helix
+    aria2
 
     fish
     vscode-fhs
+    rust-analyzer
     alacritty
     nixfmt-rfc-style
+    direnv
+    vlc
 
     fd
     ripgrep
@@ -38,17 +56,14 @@
     openloco
     lutris
     wineWowPackages.stable
+    thunderbird
 
     qq
     wechat-uos
     aseprite
 
     megacmd
-
-    (pkgs.runCommand "openttd-jgrpp" { nativeBuildInputs = [ pkgs.makeWrapper ]; } ''
-      mkdir -p $out/bin
-      makeWrapper ${pkgs.openttd-jgrpp}/bin/openttd $out/bin/openttd-jgrpp --argv0 openttd
-    '')
+    hplip
   ];
 
   # Steam

@@ -12,6 +12,8 @@
     ibm-plex # sans serif
     sarasa-gothic # monospace
     unifont
+    noto-fonts-color-emoji
+    noto-fonts-monochrome-emoji
   ];
   fonts.fontconfig.defaultFonts = {
     monospace = [
@@ -51,5 +53,6 @@
     XMODIFIERS = "@im=fcitx";
     SDL_IM_MODULE = "fcitx";
     GLFW_IM_MODULE = "ibus";
+    SHELL = "${pkgs.fish}/bin/fish";
   };
 }
