@@ -14,11 +14,13 @@
     unifont
     noto-fonts-color-emoji
     noto-fonts-monochrome-emoji
+    nerd-fonts.iosevka
   ];
   fonts.fontconfig.defaultFonts = {
     monospace = [
       "Sarasa Fixed SC"
       "Noto Color Emoji"
+      "Iosevka Nerd Font"
     ];
     sansSerif = [
       "IBM Plex Sans"
