@@ -16,6 +16,9 @@
   time.timeZone = "America/Vancouver";
   i18n.defaultLocale = "en_CA.UTF-8";
 
+  # zram
+  zramSwap.enable = true;
+
   # printers
   services.printing.enable = true;
   services.printing.drivers = [
