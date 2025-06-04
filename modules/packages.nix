@@ -44,6 +44,7 @@ in
     nixfmt-rfc-style
     direnv
     vlc
+    zellij
 
     fd
     ripgrep
