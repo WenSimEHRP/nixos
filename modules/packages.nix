@@ -15,6 +15,10 @@ let
     };
     # don't install the basesets after install
     postInstall = "";
+    buildInputs = oldAttrs.buildInputs ++ [ pkgs.libGL ];
+  });
+  openttd = pkgs.openttd.overrideAttrs (oldAttrs: {
+    buildInputs = oldAttrs.buildInputs ++ [ pkgs.libGL ];
   });
 in
 {
