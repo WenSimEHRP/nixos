@@ -28,6 +28,9 @@ in
   # Firefox
   programs.firefox.enable = true;
 
+  # Flatpak territory
+  services.flatpak.enable = true;
+
   # System packages
   environment.systemPackages = with pkgs; [
     wget
@@ -66,6 +69,7 @@ in
     qq
     wechat-uos
     aseprite
+    vesktop
 
     megacmd
     hplip
