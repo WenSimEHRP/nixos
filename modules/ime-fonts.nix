@@ -23,8 +23,7 @@
       "Iosevka Nerd Font"
     ];
     sansSerif = [
-      "IBM Plex Sans"
-      "IBM Plex Sans SC"
+      "Sarasa UI SC"
       "Noto Color Emoji"
     ];
     serif = [
@@ -56,5 +55,6 @@
     SDL_IM_MODULE = "fcitx";
     GLFW_IM_MODULE = "ibus";
     SHELL = "${pkgs.fish}/bin/fish";
+    EDITOR = "${pkgs.helix}/bin/hx";
   };
 }
