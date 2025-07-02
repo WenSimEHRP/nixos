@@ -28,8 +28,14 @@ in
   # Firefox
   programs.firefox.enable = true;
 
+  # some KDE stuff
+  programs.kdeconnect.enable = true;
+
   # Flatpak territory
   services.flatpak.enable = true;
+
+  # quack quack
+  programs.yazi.enable = true;
 
   # System packages
   environment.systemPackages = with pkgs; [
@@ -70,6 +76,7 @@ in
     wechat-uos
     aseprite
     vesktop
+    telegram-desktop
 
     megacmd
     hplip
