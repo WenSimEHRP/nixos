@@ -21,7 +21,7 @@
     enable = true;
     webui = pkgs.metacubexd;
     tunMode = true;
-    configFile = /etc/mihomo.yaml;
+    configFile = "/etc/mihomo.yaml";
   };
   
   networking.firewall = {
