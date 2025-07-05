@@ -16,6 +16,26 @@
   i18n.defaultLocale = "en_CA.UTF-8";
   services.automatic-timezoned.enable = true;
 
+  # networking
+  services.mihomo = {
+    enable = true;
+    webui = pkgs.metacubexd;
+    tunMode = true;
+    configFile = /etc/mihomo.yaml;
+  };
+  
+  networking.firewall = {
+    enable = false;
+    trustedInterfaces = [ "tunrouted" ];
+  };
+
+  # mirror providers
+  nix.settings.substituters = [
+    "https://mirror.sjtu.edu.cn/nix-channels/store"
+    "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+    "https://mirrors.ustc.edu.cn/nix-channels/store"
+  ];
+  
   # zram
   zramSwap.enable = true;
 
