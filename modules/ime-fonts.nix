@@ -31,6 +31,9 @@
       "Noto Serif CJK SC"
       "Noto Color Emoji"
     ];
+    emoji = [
+      "Noto Color Emoji"
+    ];
   };
 
   # Input method
