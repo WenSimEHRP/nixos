@@ -49,6 +49,7 @@ in
     tinymist
     helix
     aria2
+    rustup
 
     fish
     vscode-fhs
