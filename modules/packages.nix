@@ -78,6 +78,7 @@ in
     aseprite
     vesktop
     telegram-desktop
+    mangohud
 
     megacmd
     hplip
