@@ -72,6 +72,7 @@ in
     lutris
     wineWowPackages.stable
     thunderbird
+    winetricks
 
     qq
     wechat-uos
