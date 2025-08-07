@@ -13,8 +13,8 @@
   # Core system settings
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
+  time.timeZone = "America/Vancouver";
   i18n.defaultLocale = "en_CA.UTF-8";
-  services.automatic-timezoned.enable = true;
 
   # for obs
   boot.extraModulePackages = with config.boot.kernelPackages; [
