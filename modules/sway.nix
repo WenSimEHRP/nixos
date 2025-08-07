@@ -21,11 +21,11 @@
   services.gnome.gnome-keyring.enable = true;
 
   # enable sway window manager
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-    extraOptions = [ "--unsupported-gpu" ]; # nvidia stuff
-  };
+  # programs.sway = {
+  #   enable = true;
+  #   wrapperFeatures.gtk = true;
+  #   extraOptions = [ "--unsupported-gpu" ]; # nvidia stuff
+  # };
   users.users.jeremyg.extraGroups = [ "video" ];
   programs.light.enable = true;
 
