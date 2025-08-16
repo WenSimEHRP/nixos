@@ -27,6 +27,7 @@ in
 
   # Firefox
   programs.firefox.enable = true;
+  programs.chromium.enable = true;
 
   # some KDE stuff
   programs.kdeconnect.enable = true;
@@ -64,6 +65,7 @@ in
     ripgrep
     bat
     fastfetch
+    chromium
 
     openttd
     openttd-jgrpp
@@ -80,6 +82,8 @@ in
     vesktop
     telegram-desktop
     mangohud
+    lsfg-vk-ui
+    lsfg-vk
 
     megacmd
     hplip
