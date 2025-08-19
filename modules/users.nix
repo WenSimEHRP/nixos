@@ -18,4 +18,13 @@
       kdePackages.kate
     ];
   };
+  users.users.tester = {
+    isNormalUser = true;
+    description = "Tester";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    hashedPassword = "";
+  };
 }
