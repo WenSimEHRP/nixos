@@ -84,6 +84,7 @@ in
     mangohud
     lsfg-vk-ui
     lsfg-vk
+    inkscape
 
     megacmd
     hplip
