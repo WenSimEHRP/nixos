@@ -16,7 +16,7 @@
     ./modules/users.nix
     ./modules/packages.nix
     ./modules/ime-fonts.nix
-    ./modules/sway.nix
+    # ./modules/sway.nix
   ];
 
   nix.settings.experimental-features = [
