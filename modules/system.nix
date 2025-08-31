@@ -46,6 +46,9 @@
   # zram
   zramSwap.enable = true;
 
+  # envfs
+  services.envfs.enable = true;
+
   # printers
   services.printing.enable = true;
   services.printing.drivers = [
