@@ -27,7 +27,6 @@ in
 
   # Firefox
   programs.firefox.enable = true;
-  programs.chromium.enable = true;
 
   # some KDE stuff
   programs.kdeconnect.enable = true;
@@ -53,6 +52,7 @@ in
     rustup
 
     fish
+    nushell
     vscode-fhs
     rust-analyzer
     alacritty
@@ -65,7 +65,6 @@ in
     ripgrep
     bat
     fastfetch
-    chromium
 
     openttd
     openttd-jgrpp
@@ -73,7 +72,6 @@ in
     openloco
     lutris
     wineWowPackages.stable
-    thunderbird
     winetricks
 
     qq
@@ -88,6 +86,8 @@ in
 
     megacmd
     hplip
+
+    google-chrome
 
     # kde stuff
     kdePackages.kcalc # Calculator

@@ -15,6 +15,8 @@
     noto-fonts-color-emoji
     noto-fonts-monochrome-emoji
     nerd-fonts.iosevka
+    merriweather
+    merriweather-sans
   ];
   fonts.fontconfig.defaultFonts = {
     monospace = [
@@ -57,7 +59,7 @@
     XMODIFIERS = "@im=fcitx";
     SDL_IM_MODULE = "fcitx";
     GLFW_IM_MODULE = "ibus";
-    SHELL = "${pkgs.fish}/bin/fish";
+    SHELL = "${pkgs.nushell}/bin/nushell";
     EDITOR = "${pkgs.helix}/bin/hx";
   };
 }
