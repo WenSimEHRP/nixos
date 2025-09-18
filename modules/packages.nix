@@ -37,8 +37,18 @@ in
   # quack quack
   programs.yazi.enable = true;
 
+  # niri
+  programs.niri.enable = true;
+
   # System packages
   environment.systemPackages = with pkgs; [
+    vscodium
+    lxqt.lxqt-wayland-session
+    xwayland-satellite
+    waybar
+    swaylock
+    mako
+    fuzzel
     wget
     git
     gitui
