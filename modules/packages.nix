@@ -42,13 +42,8 @@ in
 
   # System packages
   environment.systemPackages = with pkgs; [
-    vscodium
-    lxqt.lxqt-wayland-session
-    xwayland-satellite
-    waybar
-    swaylock
-    mako
-    fuzzel
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
     wget
     git
     gitui

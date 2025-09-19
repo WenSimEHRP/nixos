@@ -13,8 +13,8 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
-  services.xserver.desktopManager.lxqt.enable = true;
-  services.displayManager.sessionPackages = [ pkgs.lxqt.lxqt-wayland-session ];
+  # services.xserver.desktopManager.lxqt.enable = true;
+  # services.displayManager.sessionPackages = [ pkgs.lxqt.lxqt-wayland-session ];
 
   # Configure keymap in X11
   services.xserver.xkb = {

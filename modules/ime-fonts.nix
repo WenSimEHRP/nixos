@@ -59,7 +59,5 @@
     XMODIFIERS = "@im=fcitx";
     SDL_IM_MODULE = "fcitx";
     GLFW_IM_MODULE = "ibus";
-    # SHELL = "${pkgs.nushell}/bin/nu";
-    EDITOR = "${pkgs.helix}/bin/hx";
   };
 }
