@@ -44,6 +44,7 @@ in
   environment.systemPackages = with pkgs; [
     xdg-desktop-portal
     xdg-desktop-portal-gtk
+    xwayland-satellite
     wget
     git
     gitui
@@ -80,7 +81,7 @@ in
     winetricks
 
     qq
-    wechat-uos
+    wechat
     aseprite
     vesktop
     telegram-desktop
