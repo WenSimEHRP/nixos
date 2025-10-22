@@ -45,6 +45,15 @@ in
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-backgroundremoval
+      obs-pipewire-audio-capture
+    ];
+  };
+
   # System packages
   environment.systemPackages = with pkgs; [
     xwayland-satellite
@@ -59,6 +68,7 @@ in
     helix
     aria2
     rustup
+    audacity
 
     fish
     nushell
@@ -77,7 +87,7 @@ in
 
     openttd
     openttd-jgrpp
-    openrct2
+    # openrct2
     openloco
     lutris
     wineWowPackages.stable
@@ -95,6 +105,7 @@ in
 
     megacmd
     hplip
+    rclone
 
     google-chrome
 
