@@ -27,4 +27,16 @@
     ];
     hashedPassword = "";
   };
+  users.users.guest = {
+    isNormalUser = true;
+    description = "Guest - PWD is 'a'";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    password = "a";
+  };
+  systemd.tmpfiles.rules = [
+    "D! /home/guest 0700 guest users - -"
+  ];
 }
