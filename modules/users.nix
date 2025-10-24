@@ -14,25 +14,12 @@
       "networkmanager"
       "wheel"
     ];
-    packages = with pkgs; [
-      kdePackages.kate
-    ];
-  };
-  users.users.tester = {
-    isNormalUser = true;
-    description = "Tester";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-    hashedPassword = "";
   };
   users.users.guest = {
     isNormalUser = true;
-    description = "Guest - PWD is 'a'";
+    description = "Guest";
     extraGroups = [
       "networkmanager"
-      "wheel"
     ];
     password = "a";
   };
