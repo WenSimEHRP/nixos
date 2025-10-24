@@ -38,6 +38,10 @@
     trustedInterfaces = [ "tunrouted" ];
   };
 
+  networking.hosts = {
+    "10.254.98.1" = [ "captiveportal-login.vpl.ca" ];
+  };
+
   # mirror providers
   # nix.settings.substituters = [
   #   "https://mirrors.ustc.edu.cn/nix-channels/store"
