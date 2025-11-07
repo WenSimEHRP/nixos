@@ -46,6 +46,7 @@
       fcitx5-gtk
       fcitx5-lua
       fcitx5-rime
+      fcitx5-mozc # Japanese input method
       kdePackages.fcitx5-configtool
       libsForQt5.fcitx5-qt
       qt6Packages.fcitx5-qt
