@@ -102,6 +102,7 @@ in
     lsfg-vk-ui
     lsfg-vk
     inkscape
+    darktable
 
     megacmd
     hplip
