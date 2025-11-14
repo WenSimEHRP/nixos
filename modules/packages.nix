@@ -92,6 +92,7 @@ in
     lutris
     wineWowPackages.stable
     winetricks
+    gamemode
 
     qq
     wechat
