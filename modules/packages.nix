@@ -88,7 +88,7 @@ in
     openttd
     openttd-jgrpp
     # openrct2
-    openloco
+    # openloco
     lutris
     wineWowPackages.stable
     winetricks
