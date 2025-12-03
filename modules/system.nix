@@ -66,15 +66,14 @@
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
-  # powertop power management
-  services.power-profiles-daemon.enable = false;
-  powerManagement.powertop.enable = true;
-  services.tlp = {
-    enable = true;
-    settings = {
-      SATA_LINKPWR_ON_BAT = "med_power_with_dipm";
-      DISK_APM_LEVEL_ON_AC = "254 254";
-      DISK_APM_LEVEL_ON_BAT = "128 128";
-    };
-  };
+  # services.power-profiles-daemon.enable = false;
+  # powerManagement.powertop.enable = true;
+  # services.tlp = {
+  #   enable = true;
+  #   settings = {
+  #     SATA_LINKPWR_ON_BAT = "med_power_with_dipm";
+  #     DISK_APM_LEVEL_ON_AC = "254 254";
+  #     DISK_APM_LEVEL_ON_BAT = "128 128";
+  #   };
+  # };
 }
