@@ -26,12 +26,12 @@
   security.polkit.enable = true;
 
   # networking
-  # services.mihomo = {
-  #   enable = true;
-  #   webui = pkgs.metacubexd;
-  #   tunMode = true;
-  #   configFile = "/etc/akua.yaml";
-  # };
+  services.mihomo = {
+    enable = true;
+    webui = pkgs.metacubexd;
+    tunMode = true;
+    configFile = "/etc/akua.yaml";
+  };
 
   networking.firewall = {
     enable = false;
