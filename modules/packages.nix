@@ -47,6 +47,11 @@ in
 
   programs.obs-studio = {
     enable = true;
+    package = (
+      pkgs.obs-studio.override {
+        cudaSupport = true;
+      }
+    );
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs
       obs-backgroundremoval
@@ -56,6 +61,7 @@ in
 
   # System packages
   environment.systemPackages = with pkgs; [
+    ffmpeg-full
     xwayland-satellite
     wget
     git
@@ -95,7 +101,7 @@ in
     gamemode
 
     qq
-    wechat
+    # wechat
     aseprite
     vesktop
     telegram-desktop
