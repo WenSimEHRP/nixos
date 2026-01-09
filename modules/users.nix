@@ -15,12 +15,4 @@
       "wheel"
     ];
   };
-  users.users.jeremy = {
-    isNormalUser = true;
-    description = "Jeremy Gnome";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-  };
 }
