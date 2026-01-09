@@ -15,15 +15,12 @@
       "wheel"
     ];
   };
-  users.users.guest = {
+  users.users.jeremy = {
     isNormalUser = true;
-    description = "Guest";
+    description = "Jeremy Gnome";
     extraGroups = [
       "networkmanager"
+      "wheel"
     ];
-    password = "a";
   };
-  systemd.tmpfiles.rules = [
-    "D! /home/guest 0700 guest users - -"
-  ];
 }

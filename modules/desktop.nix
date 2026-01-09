@@ -12,9 +12,10 @@
   # Enable the KDE Plasma Desktop Environment
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
+  # services.displayManager.gdm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  # services.xserver.desktopManager.lxqt.enable = true;
-  # services.displayManager.sessionPackages = [ pkgs.lxqt.lxqt-wayland-session ];
+  # services.desktopManager.gnome.enable = true;
+  # environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -30,7 +31,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # jack.enable = true;
   };
 
   # Enable CUPS to print documents

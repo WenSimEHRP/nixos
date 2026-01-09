@@ -22,29 +22,17 @@ let
   });
 in
 {
-  # Allow unfree packages
-  # nixpkgs.config.allowUnfree = true;
-
   # Firefox
   programs.firefox.enable = true;
-
-  # some KDE stuff
+  programs.git.enable = true;
   programs.kdeconnect.enable = true;
-
-  # Flatpak territory
   services.flatpak.enable = true;
-
-  # quack quack
   programs.yazi.enable = true;
-
-  # niri
-  programs.niri.enable = true;
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
-
   programs.obs-studio = {
     enable = true;
     package = (
@@ -58,13 +46,9 @@ in
       obs-pipewire-audio-capture
     ];
   };
-
-  # System packages
   environment.systemPackages = with pkgs; [
     ffmpeg-full
-    xwayland-satellite
     wget
-    git
     gitui
     fzf
     gh
@@ -73,15 +57,13 @@ in
     tinymist
     helix
     aria2
-    rustup
     audacity
 
     fish
     nushell
     vscode-fhs
-    rust-analyzer
     alacritty
-    nixfmt-rfc-style
+    nixfmt
     direnv
     vlc
     zellij
@@ -116,20 +98,20 @@ in
     rclone
 
     google-chrome
+    wl-clipboard
 
     # kde stuff
-    kdePackages.kcalc # Calculator
-    kdePackages.kcharselect # Tool to select and copy special characters from all installed fonts
-    kdePackages.kcolorchooser # A small utility to select a color
-    kdePackages.kolourpaint # Easy-to-use paint program
-    kdePackages.ksystemlog # KDE SystemLog Application
-    kdePackages.sddm-kcm # Configuration module for SDDM
-    kdiff3 # Compares and merges 2 or 3 files or directories
-    kdePackages.isoimagewriter # Optional: Program to write hybrid ISO files onto USB disks
-    kdePackages.partitionmanager # Optional Manage the disk devices, partitions and file systems on your computer
-    hardinfo2 # System information and benchmarks for Linux systems
-    wayland-utils # Wayland utilities
-    wl-clipboard # Command-line copy/paste utilities for Wayland
+    # kdePackages.kcalc # Calculator
+    # kdePackages.kcharselect # Tool to select and copy special characters from all installed fonts
+    # kdePackages.kcolorchooser # A small utility to select a color
+    # kdePackages.kolourpaint # Easy-to-use paint program
+    # kdePackages.ksystemlog # KDE SystemLog Application
+    # kdePackages.sddm-kcm # Configuration module for SDDM
+    # kdiff3 # Compares and merges 2 or 3 files or directories
+    # kdePackages.isoimagewriter # Optional: Program to write hybrid ISO files onto USB disks
+    # kdePackages.partitionmanager # Optional Manage the disk devices, partitions and file systems on your computer
+    # hardinfo2 # System information and benchmarks for Linux systems
+    # wayland-utils # Wayland utilities
   ];
 
   # Steam

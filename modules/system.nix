@@ -11,7 +11,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Core system settings
-  networking.hostName = "nixos";
+  networking.hostName = "hotbars";
   networking.networkmanager.enable = true;
   time.timeZone = "America/Vancouver";
   i18n.defaultLocale = "en_CA.UTF-8";
@@ -26,17 +26,17 @@
   security.polkit.enable = true;
 
   # networking
-  services.mihomo = {
-    enable = true;
-    webui = pkgs.metacubexd;
-    tunMode = true;
-    configFile = "/etc/akua.yaml";
-  };
+  # services.mihomo = {
+  #   enable = true;
+  #   webui = pkgs.metacubexd;
+  #   tunMode = true;
+  #   configFile = "/etc/akua.yaml";
+  # };
 
-  networking.firewall = {
-    enable = false;
-    trustedInterfaces = [ "tunrouted" ];
-  };
+  # networking.firewall = {
+  #   enable = false;
+  #   trustedInterfaces = [ "tunrouted" ];
+  # };
 
   networking.hosts = {
     # "10.254.98.1" = [ "captiveportal-login.vpl.ca" ];
@@ -65,15 +65,4 @@
   };
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-
-  # services.power-profiles-daemon.enable = false;
-  # powerManagement.powertop.enable = true;
-  # services.tlp = {
-  #   enable = true;
-  #   settings = {
-  #     SATA_LINKPWR_ON_BAT = "med_power_with_dipm";
-  #     DISK_APM_LEVEL_ON_AC = "254 254";
-  #     DISK_APM_LEVEL_ON_BAT = "128 128";
-  #   };
-  # };
 }
