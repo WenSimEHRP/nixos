@@ -18,7 +18,6 @@
     in {
       nixosConfigurations.hotbars = nixpkgs.lib.nixosSystem {
         inherit system pkgs;
-
         modules = [
           ./configuration.nix
           nixos-hardware.nixosModules.lenovo-legion-16irx8h
