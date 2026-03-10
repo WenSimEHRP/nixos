@@ -49,78 +49,76 @@ in
       obs-pipewire-audio-capture
     ];
   };
-  environment.systemPackages =
-    with pkgs;
-    [
-      ffmpeg-full
-      wget
-      gitui
-      fzf
-      gh
-      gnumake
-      typst
-      tinymist
-      helix
-      aria2
-      audacity
-      (hashcat.override { cudaSupport = true; })
+  environment.systemPackages = with pkgs; [
+    ffmpeg-full
+    wget
+    gitui
+    fzf
+    gh
+    gnumake
+    typst
+    tinymist
+    helix
+    aria2
+    audacity
+    (hashcat.override { cudaSupport = true; })
 
-      fish
-      nushell
-      vscode-fhs
-      alacritty
-      nixfmt
-      direnv
-      vlc
-      zellij
+    fish
+    nushell
+    vscode-fhs
+    alacritty
+    nixfmt
+    direnv
+    vlc
+    zellij
 
-      fd
-      ripgrep
-      bat
-      fastfetch
-      nh
-      nil
+    fd
+    ripgrep
+    bat
+    fastfetch
+    nh
+    nil
 
-      openttd
-      openttd-jgrpp
-      # openrct2
-      # openloco
-      lutris
-      wineWowPackages.stable
-      winetricks
-      gamemode
+    openttd
+    openttd-jgrpp
+    # openrct2
+    # openloco
+    lutris
+    wineWowPackages.stable
+    winetricks
+    gamemode
 
-      qq
-      # wechat
-      aseprite
-      vesktop
-      telegram-desktop
-      mangohud
-      lsfg-vk-ui
-      lsfg-vk
-      inkscape
-      darktable
+    qq
+    # wechat
+    aseprite
+    vesktop
+    telegram-desktop
+    mangohud
+    lsfg-vk-ui
+    lsfg-vk
+    inkscape
+    darktable
 
-      megacmd
-      hplip
-      rclone
+    megacmd
+    hplip
+    rclone
 
-      google-chrome
-      wl-clipboard
+    google-chrome
+    wl-clipboard
 
-      # kde stuff
-      kdePackages.kcalc # Calculator
-      # kdePackages.kcharselect # Tool to select and copy special characters from all installed fonts
-      # kdePackages.kcolorchooser # A small utility to select a color
-      # kdePackages.kolourpaint # Easy-to-use paint program
-      kdePackages.ksystemlog # KDE SystemLog Application
-      # kdePackages.sddm-kcm # Configuration module for SDDM
-      # kdiff3 # Compares and merges 2 or 3 files or directories
-      # kdePackages.isoimagewriter # Optional: Program to write hybrid ISO files onto USB disks
-      kdePackages.partitionmanager # Optional Manage the disk devices, partitions and file systems on your computer
-      # hardinfo2 # System information and benchmarks for Linux systems
-      wayland-utils # Wayland utilities
-    ];
+    # kde stuff
+    kdePackages.kcalc # Calculator
+    # kdePackages.kcharselect # Tool to select and copy special characters from all installed fonts
+    # kdePackages.kcolorchooser # A small utility to select a color
+    # kdePackages.kolourpaint # Easy-to-use paint program
+    kdePackages.ksystemlog # KDE SystemLog Application
+    # kdePackages.sddm-kcm # Configuration module for SDDM
+    # kdiff3 # Compares and merges 2 or 3 files or directories
+    # kdePackages.isoimagewriter # Optional: Program to write hybrid ISO files onto USB disks
+    kdePackages.partitionmanager # Optional Manage the disk devices, partitions and file systems on your computer
+    # hardinfo2 # System information and benchmarks for Linux systems
+    wayland-utils # Wayland utilities
+  ];
 
   # Steam
   programs.steam = {
